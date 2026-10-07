@@ -1,0 +1,14 @@
+name: Required CI
+
+on:
+  pull_request:
+
+jobs:
+  gate:
+    name: poc-gate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simulate a required build
+        run: |
+          sleep 20
+          echo "required check passed for $GITHUB_SHA"
